@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  display: grid;
+  place-items: center;
+}
+
+.container{
+  width: 600px;
+  height: 160px;
+  border-radius: .625rem;
+  background: rgb(54, 54, 223);
+}
+
+.topic{
+  color: wheat;
+  height: 100vh;
+  position: absolute;
+  margin-top: 60px;
+}
+
+.quiz{
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  border-radius:5px;
+  align-items: center;
+  background: rgb(67, 67, 228);
+  /* background-color: rgb(163, 93, 12); */
+}
+
+#answer-buttons{
+  margin-top: 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+h2{
+  position: absolute;
+  top: 6.25rem;
+  color: black;
+  text-align: center;
+}
+
+.btn{
+  box-shadow: 0px 7px 7px 0px rgb(3, 16, 70);
+  background: rgb(62, 62, 250);
+  text-transform: uppercase;
+  transition: .2s ease-out;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  bottom: 10px;
+  width: 21.875rem;
+  color:white ;
+  height: 4rem;
+  border: none;
+  outline: none;
+}
+
+.btn:hover:not([disabled]){  /* Disable hover after selection*/
+  background-color: grey;
+  color: antiquewhite;
+}
+
+.btn:disabled{  /* Disable btn after initial selection except the next-btn*/
+  cursor: no-drop;
+}
+
+
+#next-btn{
+  box-shadow: 0px 7px 7px 0px rgb(3, 16, 70);
+  background: rgb(39, 36, 36);
+  text-transform: uppercase;
+  transition: .2s ease-out;
+  border-radius: 12px;
+  position: absolute;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 2rem;
+  color: white;
+  outline: none;
+  display: none;
+  width: 21.875rem;
+  height: 4rem;
+  border: none;
+  top: 440px;
+}
+
+#next-btn:hover{
+  background: rgb(107, 103, 103);
+  color: antiquewhite;
+}
+
+.correct{
+  background: rgb(3, 110, 3);
+  color: orange;
+}
+
+.incorrect{
+  background: rgb(167, 26, 26);
+  color: white;
+}
+
